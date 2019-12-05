@@ -128,9 +128,11 @@ void asciiLimit()
 	printf("%d\n", '\55');
 
 	printf("%d\n", '\x12');
-	pirntf("%d\n", '\xab');
-	printf("%d\n", '\xabc');
-	printf("%d\n", '\xah');
+	printf("%d\n", '\xab');
+	//报错了，需要注释，
+	//printf("%d\n", '\xabc');
+	//报错了，需要注释，
+	//printf("%d\n", '\xah');
 }
 
 //int main(int argc, char *argv[])
