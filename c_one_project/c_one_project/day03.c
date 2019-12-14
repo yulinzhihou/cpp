@@ -253,8 +253,8 @@ void compareArithmetic()
 }
 
 
-int main(int argc, char *argv[])
-{
+//int main(int argc, char *argv[])
+//{
 	//singleFLoat();
 	//floatVariable();
 	//nagetive();
@@ -270,7 +270,7 @@ int main(int argc, char *argv[])
 	//formatPrint();
 	//addOrMinusUsedGive();
 	//evalVariable();
-	compareArithmetic();
-	system("pause");
-	return 0;
-}
+	//compareArithmetic();
+	//system("pause");
+	//return 0;
+//}
