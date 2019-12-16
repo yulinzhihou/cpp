@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//#define _CRT_SECURE_NO_WARNINGS
 
 void singleFLoat()
 {
@@ -38,7 +39,7 @@ void hexNum()
 
 void dataFlow()
 {
-	char num = 0xff + 2;
+	int num = 0xff + 2;
 	printf("十六进制数0xff与2相加，有符号取，num = %d\n", num);
 	printf("十六进制数0xff与2相加，无符号取，num = %#2x\n", num);
 }
@@ -84,7 +85,7 @@ void strVariable()
 {
 	printf("%u\n", sizeof("hello"));//字符5个，加个结束符号 \0；
 	printf("%s\n", "hello world");//输出从首元素开始，一直到\0结束
-	printf("%u\n", "hello world");//取字符串首元素地址
+	printf("%p\n", "hello world");//取字符串首元素地址
 	printf("%s\n", "hello world" + 2);//字符串+2，相当于从 首元素开始往后的第三个元素开始输出，前面2个不输出 
 	printf("%s\n", "hello\0world");//字符串常量中间有\0,遇到\0则输出结束
 	printf("%s\n", "\0hello world");//字符串常量如果开头就是\0，则直接输出空
