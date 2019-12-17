@@ -601,8 +601,8 @@ void arrReverse()
 	printf("\n");
 }
 
-int main(int argc, char *argv[])
-{
+//int main(int argc, char *argv[])
+//{
 	//threeUnit();
 	//commaOperator();
 	//typeAutoTransform();
@@ -625,7 +625,7 @@ int main(int argc, char *argv[])
 	//oneArray();
 	//oneArr02();
 	//oneArr03();
-	arrReverse();
-	system("pause");
-	return 0;
-}
+	//arrReverse();
+	//system("pause");
+	//return 0;
+//}
