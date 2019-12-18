@@ -139,14 +139,134 @@ void twoArrOperate()
 
 }
 
+
+//二维数组名.
+void twoArrName()
+{
+	int arr[3][4];
+	printf("sizeof(arr) = %d\n", sizeof(arr));
+	printf("sizeof(arr[0]) = %d\n", sizeof(arr[0]));
+	printf("sizeof(arr[0][0] = %d\n", sizeof(arr[0][0]));
+	printf("行数：row = sizeof(arr)/sizeof(arr[0]) = %d\n", sizeof(arr) / sizeof(arr[0]));
+	printf("列数：col = sizeof(arr[0])/sizeof(arr[0][0]) = %d\n", sizeof(arr[0]) / sizeof(arr[0][0]));
+	printf("二维数组长度: row * col == n == sizeof(arr)/sizeof(arr[0][0]) = %d\n", sizeof(arr) / sizeof(arr[0][0]));
+}
+
+//二维数组demo
+void twoArrDemo2()
+{
+	int arr[4][5] = { 0 };
+	int row = sizeof(arr) / sizeof(arr[0]);
+	int col = sizeof(arr[0]) / sizeof(arr[0][0]);
+
+	printf("请输入%d个整型数据：\n", row*col);
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			scanf("%d", &arr[i][j]);
+		}
+	}
+
+	printf("--------------------------\n");
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+//用二维数组求一组数的平均值 
+void getAvgNum()
+{
+	int arr[3][3] = { 0 };
+	int row = sizeof(arr) / sizeof(arr[0]);
+	int col = sizeof(arr[0]) / sizeof(arr[0][0]);
+	int sum = 0, avg = 0;
+	
+	printf("请输入%d个整型数据，要求大于0小于等于100\n", row*col);
+
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			scanf("%d", &arr[i][j]);
+		}
+
+	}
+	//假设第一个元素为最大值和最小值 
+	int max = arr[0][0], min = arr[0][1];
+
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			sum += arr[i][j];
+			if (max < arr[i][j])
+			{
+				max = arr[i][j];
+			}
+
+			if (min > arr[i][j])
+			{
+				min = arr[i][j];
+			}
+		}
+	}
+
+	printf("这一组数的总和为：%d,平均值为: %d\n",sum, sum /( row * col));
+	printf("最大值为：%d\n", max);
+	printf("最小值为：%d\n", min);
+}
+
+
+//字符数组
+void charArr()
+{
+	//逐个元素初始化
+	char arr[5] = { 'h','e','l','l','o' };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	//遍历
+	for (int i = 0; i < n; i++)
+	{
+		printf("arr[%d] = %c\n",i, arr[i]);
+	}
+	//可以使用%s整体输出字符数组，空间起始地址，遇到'\0'结束输出
+	printf("char arr = %s\n", arr);
+}
+
+
+//以字符串的方式进行初始化
+void charArrInitByString()
+{
+	char arr[12] = "hello world";
+	printf("arr = %s\n", arr);
+	int n = sizeof(arr) / sizeof(arr[0]);
+
+	for (size_t i = 0; i < n; i++)
+	{
+		printf("arr[%d] = %c\n", i, arr[i]);
+	}
+
+}
+
 int main(int argc, char *argv[])
 {
 	//bubbleSort();
 	//arrDemo();
+
 	//twoArr();
 	//twoArrInit();
 	//twoArrDemo();
-	twoArrOperate();
+	//twoArrOperate();
+	//twoArrName();
+	//twoArrDemo2();
+	//getAvgNum();
+	//charArr();
+	charArrInitByString();
 	system("pause");
 	return 0;
 }
